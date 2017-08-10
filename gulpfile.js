@@ -59,7 +59,6 @@ gulp.task('server', function(){
 //合并文件，可以将多个文件合并成一个文件 。
 gulp.task('buildjs', function() {
   gulp.src([
-
     './src/public/js/component.js',
   ])
       .pipe(concat("build.js"))
