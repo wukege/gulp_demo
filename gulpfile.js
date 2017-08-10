@@ -9,7 +9,7 @@ var gulp = require('gulp'),
   babel = require("gulp-babel"),
   es2015 = require("babel-preset-es2015"),
   jshint = require('gulp-jshint'),
-  concat = require('gulp-concat')
+  concat = require('gulp-concat');
 
 //编译html文件，将html文件拷贝到www文件夹在下。
 gulp.task('html', function(){
@@ -34,7 +34,7 @@ gulp.task('js', function(){
     .pipe(gulp.dest('./www/public/js'));
 });
 
-//编译libs
+//编译libs,将libs文件夹复制到ｗｗｗ文件夹下
 gulp.task('libs', function(){
   gulp.src('./src/public/libs/**')
     .pipe(gulp.dest('./www/public/libs'));
@@ -46,7 +46,7 @@ gulp.task('images', function(){
     .pipe(gulp.dest('./www/public/images'));
 });
 
-//创建服务器
+//创建一个本地服务
 gulp.task('server', function(){
   browserSync({
     port: 8080,
@@ -58,7 +58,7 @@ gulp.task('server', function(){
   });
 });
 
-//合并文件
+//合并文件，可以将多个文件合并成一个文件 。
 gulp.task('buildjs', function() {
   gulp.src([
     './src/public/js/component.js',
