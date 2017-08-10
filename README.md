@@ -15,6 +15,8 @@ cmd  npm install  安装依赖包
 ├── src                                         // 源码目录
 │   ├── public                                 
 │   │   ├── css                                 // 样式文件夹
+│   │   │   └── base                             
+│   │   │       └── reset.styl                  // 重置浏览器样式
 │   │   │   └── index.styl                      // 样式文件  
 │   │   ├── images                              // 图片文件夹
 │   │   │   └── bg.png                         

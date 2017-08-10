@@ -4,15 +4,19 @@ var vm = new Vue({
   data: {
     username: '',
     age: '',
-    myData: [],
+    dataList:[],
   },
   mounted: function () {
 
   },
   methods: {
+    /**
+     * description 新增信息
+     * method add
+     */
     add: function () {
       if (this.username !== '' && this.age !== '') {
-        this.myData.push({
+        this.dataList.push({
           name: this.username,
           age: this.age
         });
@@ -20,16 +24,20 @@ var vm = new Vue({
         this.age = '';
       }
     },
-    del: function (index) {
-      if (index === -1) {
-        this.myData = [];
-      } else {
-        this.myData.splice(index, 1);
-      }
-    },
+    /**
+     * description 重置信息
+     * method reset
+     */
     reset: function () {
       this.username = '';
       this.age = '';
+    },
+    /**
+     * description 删除信息
+     * method add
+     */
+    delData:function (data) {
+      this.dataList = data;
     }
   },
   components: {

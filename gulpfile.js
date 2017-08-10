@@ -6,8 +6,6 @@ var gulp = require('gulp'),
   runSequence = require('run-sequence'),
   stylus = require('gulp-stylus'),
   watch = require('gulp-watch'),
-  babel = require("gulp-babel"),
-  es2015 = require("babel-preset-es2015"),
   jshint = require('gulp-jshint'),
   concat = require('gulp-concat');
 
@@ -61,6 +59,7 @@ gulp.task('server', function(){
 //合并文件，可以将多个文件合并成一个文件 。
 gulp.task('buildjs', function() {
   gulp.src([
+
     './src/public/js/component.js',
   ])
       .pipe(concat("build.js"))
