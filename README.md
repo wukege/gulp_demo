@@ -3,7 +3,7 @@
 cmd  npm install  安装依赖包
      gulp 启动项目
 ## 项目启动配置（编辑器）
-    ![image]((http://github.com/kola828/gulp_demo/raw/master/images/gulp.png))
+    ![image]((http://github.com/kola828/gulp_demo/raw/master/explain/gulp.png))
 ## 项目启动访问地址
 ## 目录结构
 ## 插件说明
