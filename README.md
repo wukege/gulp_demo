@@ -5,6 +5,7 @@ cmd  npm install  安装依赖包
 ## 项目启动配置（编辑器）
     ![image]((http://github.com/kola828/gulp_demo/raw/master/explain/gulp.png))
 ## 项目启动访问地址
+http://localhost:8080/
 ## 目录结构
 ## 插件说明
 ## github地址
