@@ -3,7 +3,7 @@
 cmd  npm install  安装依赖包
      gulp 启动项目
 ## 项目启动配置（编辑器）
-    ![image]((http://github.com/kola828/gulp_demo/raw/master/src/public/images/gulp.png))
+   
 ## 项目启动访问地址
     http://localhost:8080/
 ## 目录结构
@@ -64,7 +64,7 @@ cmd  npm install  安装依赖包
  
  
 ## 项目搭建步骤
-### 创建github
+### 创建github仓库
 - git init 
 - echo "# gulp_demo" >> README.md
 - git init
