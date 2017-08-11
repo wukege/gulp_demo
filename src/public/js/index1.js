@@ -4,7 +4,7 @@ var vm = new Vue({
   data: {
     username: '',
     age: '',
-    dataList:[],
+    myData: [],
   },
   mounted: function () {
 
@@ -16,12 +16,23 @@ var vm = new Vue({
      */
     add: function () {
       if (this.username !== '' && this.age !== '') {
-        this.dataList.push({
+        this.myData.push({
           name: this.username,
           age: this.age
         });
         this.username = '';
         this.age = '';
+      }
+    },
+    /**
+     * description 删除信息
+     * method add
+     */
+    del: function (index) {
+      if (index === -1) {
+        this.myData = [];
+      } else {
+        this.myData.splice(index, 1);
       }
     },
     /**
@@ -31,13 +42,6 @@ var vm = new Vue({
     reset: function () {
       this.username = '';
       this.age = '';
-    },
-    /**
-     * description 删除信息
-     * method add
-     */
-    delData:function (data) {
-      this.dataList = data;
     }
   },
   components: {

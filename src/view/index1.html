@@ -9,7 +9,7 @@
   <meta name="format-detection" content="email=no"/>
   <meta name="viewport" content="width=device-width,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no"/>
   <link rel="stylesheet" href="./public/css/common.css">
-  <link rel="stylesheet" href="./public/css/index.css">
+  <link rel="stylesheet" href="./public/css/index1.css">
 </head>
 <body>
 <div id="index" v-cloak>
@@ -30,13 +30,43 @@
   </form>
   <hr>
   <p class="h3 text-info">用户信息表</p>
-  <!-- 引用组件-->
-  <my-table :list="dataList" @delete="delData"></my-table>
+  <table class="table table-bordered table-hover" cellspacing="0" cellpadding="0"
+         :class="myData.length!=0?'text-muted':''">
+    <thead>
+    <tr>
+      <th>序号</th>
+      <th>名字</th>
+      <th>年龄</th>
+      <th>操作</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr class="text-center" v-for="item,index in myData">
+      <td>{{index+1}}</td>
+      <td>{{item.name}}</td>
+      <td>{{item.age}}</td>
+      <td><input class="btn" type="button" value="删除"
+                 @click="del(index)"></td>
+    </tr>
+    <tr class="text-right" v-if="myData.length != 0">
+      <td colspan="4">
+        <button class="btn btn-sm" @click="del(-1)">删除全部
+        </button>
+      </td>
+    </tr>
+    <tr v-else>
+      <td colspan="4" class="text-center last">
+        <p>暂无数据...</p>
+      </td>
+    </tr>
+    </tbody>
+  </table>
+
 </div>
 
 <script src="./public/libs/jquery/jquery.js"></script>
 <script src="./public/libs/vue/vue.js"></script>
 <script src="./public/js/build.js"></script>
-<script src="./public/js/index.js"></script>
+<script src="./public/js/index1.js"></script>
 </body>
 </html>

@@ -6,8 +6,6 @@ var gulp = require('gulp'),
   runSequence = require('run-sequence'),
   stylus = require('gulp-stylus'),
   watch = require('gulp-watch'),
-  babel = require("gulp-babel"),
-  es2015 = require("babel-preset-es2015"),
   jshint = require('gulp-jshint'),
   concat = require('gulp-concat');
 

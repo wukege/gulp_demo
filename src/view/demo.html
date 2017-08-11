@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>demo</title>
+  <meta name="keywords" content="demo"/>
+  <meta name="description" content="demo"/>
+  <meta name="format-detection" content="telephone=no"/>
+  <meta name="format-detection" content="email=no"/>
+  <meta name="viewport" content="width=device-width,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no"/>
+  <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate"/>
+  <meta http-equiv="Pragma" content="no-cache"/>
+  <meta http-equiv="Expires" content="0"/>
+  <link rel="stylesheet" href="./public/css/demo.css">
+</head>
+<body>
+<div id="demo" class="demo" v-cloak>
+  <div class="demo-one">
+    <p>v-if,v-else</p>
+    <div v-if="ifStatus" class="small-div">第一个</div>
+    <div v-else class="small-div">第二个</div>
+    <button @click="changeOne">{{ifStatus==true?'显示第一个':'显示第二个'}}</button>
+  </div>
+  <div class="demo-one">
+    <p>v-show</p>
+    <div v-show="showStatus" class="small-div">第三个</div>
+    <button @click="changeTwo">{{showStatus==true?'隐藏':'显示'}}</button>
+  </div>
+  <div class="demo-one">
+    <p>class动态绑定</p>
+    <div :class="classStatus===true?'small-div':'changeColor'">第四个</div>
+    <button @click="changeThree">改变颜色</button>
+  </div>
+  <div class="demo-one">
+    <p>v-for</p>
+    <div v-for="item in data" class="small-div2">
+      <span>{{item.type}}</span>
+      <ul>
+        <li v-for="key in item.all">{{key.value}}</li>
+      </ul>
+    </div>
+  </div>
+  <div class="demo-one">
+    <p>v-model</p>
+    <p>{{model}}</p>
+    <input v-model="model">
+  </div>
+
+</div>
+<script src="./public/libs/jquery/jquery.js"></script>
+<script src="./public/libs/vue/vue.js"></script>
+<script src="./public/js/demo.js"></script>
+</body>
+</html>

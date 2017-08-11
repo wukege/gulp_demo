@@ -15,11 +15,17 @@ cmd  npm install  安装依赖包
 ├── src                                         // 源码目录
 │   ├── public                                 
 │   │   ├── css                                 // 样式文件夹
-│   │   │   └── index.styl                      // 样式文件  
+│   │   │   └── base                             
+│   │   │       └── reset.styl                  // 重置浏览器样式
+│   │   │   └── index.styl                      // 样式文件 
+│   │   │   └── index1.styl         
+│   │   │   └── demo.styl                       // 样式文件 
 │   │   ├── images                              // 图片文件夹
 │   │   │   └── bg.png                         
 │   │   └── js                                 // js文件夹
 │   │   │   ├── index.js                       // index的js文件
+│   │   │   └── index1.js                         
+│   │   │   └── demo.js                         
 │   │   │   └── component.js                   // 公共组件js
 │   │   └── libs                               // 插件文件夹
 │   │   │   ├── jquery                         // jquery
@@ -28,14 +34,19 @@ cmd  npm install  安装依赖包
 │   │   │       └── vue.js                  
 │   ├── view                                    // html文件夹
 │   │   └── index.html                          // html页面
+│   │   └── demo.html                           // html页面
 ├── www                                         // 编译后文件目录
 │   ├── public                                  
 │   │   ├── css                                // 样式文件夹
-│   │   │   └── index.css                      // 样式文件  
+│   │   │   └── index.css                      // 样式文件 
+│   │   │   └── index1.css                      // 样式文件 
+│   │   │   └── demo.css                      // 样式文件 
 │   │   ├── images                             // 图片文件夹
 │   │   │   └── bg.png                      
 │   │   └── js                                  // js文件夹
 │   │   │   └── index.js                        // index的js文件
+│   │   │   └── index1.js                      // 样式文件
+│   │   │   └── demo.js                      // 样式文件 
 │   │   │   └── component.js                    // 公共组件js
 │   │   │   └── build.js                        // 合并的js文件
 │   │   └── libs                                //插件文件夹
@@ -43,7 +54,9 @@ cmd  npm install  安装依赖包
 │   │   │   │    └── jquery.js                  
 │   │   │   └── vue                             // vue
 │   │   │       └── vue.js                  
-│   └── index.html                              // yindex页面
+│   └── index.html                              // index页面
+│   └── index1.html                               
+│   └── demo.html                               // index页面
 ├── .gitignore                                  // git忽略文件
 ├── gulpfile.js                                 // gulp配置文件
 ├── package.json                                // 依赖包
